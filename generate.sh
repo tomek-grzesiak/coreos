@@ -14,3 +14,4 @@ sudo coreos-installer install /dev/sda \
 sudo python -m pip install  https://github.com/ansible/ansible/archive/stable-2.9.tar.gz
 
  sudo pip3 install -r requirements.txt
+ sudp rpm-ostree install python3-libselinux
