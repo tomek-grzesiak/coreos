@@ -1,0 +1,33 @@
+{
+  "ignition": {
+    "version": "3.2.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "name": "core",
+        "sshAuthorizedKeys": [
+          "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJ8/WGMt7Cp/THAF4NDSEKTuctjFh0qCFtsbvM8cHosXoaa/RDSJlouc65kZIhb0ObB0J89KtjS7DPYwG8HuAKEL0b2iejp1Snqyq6Ip11F3XqZSukVmqywRVa3abMZgYDeOTNSFefwIUl23N1TLabxbvyQPmuC+J4BMon6yv4v9559sFnAFp6vEmOFkrRCFiGmmtlgfv/BRlzzW3JE+ot6pADYNpLo8rxoDq8DzaM1P4gdg1HPi/+P7HILVUbKPZAv+JESWlGITJpk7vNcOZoVCo7Wkboy22TfKQQt+7eIf84Vb261I+Ct+tRxfPq3CKCpXPtdColozQTQfq5GvND tomek@DESKTOP-S8TVL22"
+        ]
+      }
+    ]
+  },
+  "storage": {
+    "files": [
+      {
+        "path": "/etc/hostname",
+        "contents": {
+          "source": "data:,node2.mshome.net"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/NetworkManager/system-connections/eth0.nmconnection",
+        "contents": {
+          "source": "data:,%5Bconnection%5D%0Aid%3Deth0%0Atype%3Dethernet%0Ainterface-name%3Deth0%0A%5Bipv4%5D%0Aaddress1%3D172.22.72.39%2F255.255.240.0%2C172.22.64.1%0Adhcp-hostname%3Dnode2.mshome.net%0Adns%3D172.22.64.1%0Adns-search%3Dmshome.net%0Amay-fail%3Dfalse%0Amethod%3Dmanual%0A"
+        },
+        "mode": 384
+      }
+    ]
+  }
+}
