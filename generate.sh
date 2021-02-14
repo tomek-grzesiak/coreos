@@ -10,10 +10,7 @@ sudo coreos-installer install /dev/sda \
 
  sudo hostnamectl set-hostname node1.mshome.net
 
- sudo rpm-ostree install pip
- sudo rpm-ostree install python3
-
 sudo python -m pip install  https://github.com/ansible/ansible/archive/stable-2.9.tar.gz
 
  sudo pip3 install -r requirements.txt
- sudp rpm-ostree install python3-libselinux
+ sudp rpm-ostree install python3 pip  python3-libselinux
