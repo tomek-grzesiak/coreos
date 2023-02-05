@@ -4,13 +4,20 @@ passwd:
   users:
     - name: core
       ssh_authorized_keys:
-        - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJ8/WGMt7Cp/THAF4NDSEKTuctjFh0qCFtsbvM8cHosXoaa/RDSJlouc65kZIhb0ObB0J89KtjS7DPYwG8HuAKEL0b2iejp1Snqyq6Ip11F3XqZSukVmqywRVa3abMZgYDeOTNSFefwIUl23N1TLabxbvyQPmuC+J4BMon6yv4v9559sFnAFp6vEmOFkrRCFiGmmtlgfv/BRlzzW3JE+ot6pADYNpLo8rxoDq8DzaM1P4gdg1HPi/+P7HILVUbKPZAv+JESWlGITJpk7vNcOZoVCo7Wkboy22TfKQQt+7eIf84Vb261I+Ct+tRxfPq3CKCpXPtdColozQTQfq5GvND tomek@DESKTOP-S8TVL22 
+        - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdAm0ZPVW8IBhSB2UkmghfWc1H++xGIVe5XrJWv2P7n3OpmsiCGA2yaHnzWYE9Cimtk6Muu4AR7L9AuSe/yr0bIgAEgdg/GCEjcU8js7PN69XQzps70JNA8izaz4pVVTHl8PdiPp5HNyXLoCm4U64Jrpm7byoN+jGGPFAssgCoarhgpFtbvyeuJWtSRutyaUWEqhv50QJ5NaywYpTrf2R4dspYmYnC29MSk31nL7pLPrmLNrUSPWaWn/2YLI5rPqcqunWW+COXlkpxxV5BIn7pE/RuZY/mUyCHMHU2LaSY/NiYQbnkGoeh0Z+3QKgc+BGi/kl4uRH6O5QYeTcIlEHnWrQxjNJXJwlhAmKKnW2yZl/R/OP12GCG5p9CTnMZoPfaZrpa/6At+Lm74MX2hybaJP+WYhIOhXqbMRMTo8BA7TichbxMP95euDbmc5BL4kSE2/GbUfc+1uqpCGaWvR53swShFlGU6ihcqFU3fpOBTfJM3rgbwvafc1KXtSapKmk= tomek@rhel
 storage:
   files:
     - path: /etc/hostname
       mode: 0644
       contents:
-        inline: node2.mshome.net
+        inline: node2
+    - path: /etc/hosts
+      mode: 0644
+      contents:
+        inline: | 
+          192.168.122.20 node1
+          192.168.122.21 node2
+          192.168.122.22 node3
     - path: /etc/NetworkManager/system-connections/eth0.nmconnection
       mode: 0600
       contents:
@@ -20,9 +27,9 @@ storage:
           type=ethernet
           interface-name=eth0
           [ipv4]
-          address1=172.22.72.39/255.255.240.0,172.22.64.1
-          dhcp-hostname=node2.mshome.net
-          dns=172.22.64.1
-          dns-search=mshome.net
+          address1=192.168.122.21/255.255.255.0,192.168.122.1
+          dhcp-hostname=node2
+          dns=192.168.122.1
+          dns-search=
           may-fail=false
           method=manual

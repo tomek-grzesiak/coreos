@@ -7,7 +7,7 @@
       {
         "name": "core",
         "sshAuthorizedKeys": [
-          "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJ8/WGMt7Cp/THAF4NDSEKTuctjFh0qCFtsbvM8cHosXoaa/RDSJlouc65kZIhb0ObB0J89KtjS7DPYwG8HuAKEL0b2iejp1Snqyq6Ip11F3XqZSukVmqywRVa3abMZgYDeOTNSFefwIUl23N1TLabxbvyQPmuC+J4BMon6yv4v9559sFnAFp6vEmOFkrRCFiGmmtlgfv/BRlzzW3JE+ot6pADYNpLo8rxoDq8DzaM1P4gdg1HPi/+P7HILVUbKPZAv+JESWlGITJpk7vNcOZoVCo7Wkboy22TfKQQt+7eIf84Vb261I+Ct+tRxfPq3CKCpXPtdColozQTQfq5GvND tomek@DESKTOP-S8TVL22"
+          "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdAm0ZPVW8IBhSB2UkmghfWc1H++xGIVe5XrJWv2P7n3OpmsiCGA2yaHnzWYE9Cimtk6Muu4AR7L9AuSe/yr0bIgAEgdg/GCEjcU8js7PN69XQzps70JNA8izaz4pVVTHl8PdiPp5HNyXLoCm4U64Jrpm7byoN+jGGPFAssgCoarhgpFtbvyeuJWtSRutyaUWEqhv50QJ5NaywYpTrf2R4dspYmYnC29MSk31nL7pLPrmLNrUSPWaWn/2YLI5rPqcqunWW+COXlkpxxV5BIn7pE/RuZY/mUyCHMHU2LaSY/NiYQbnkGoeh0Z+3QKgc+BGi/kl4uRH6O5QYeTcIlEHnWrQxjNJXJwlhAmKKnW2yZl/R/OP12GCG5p9CTnMZoPfaZrpa/6At+Lm74MX2hybaJP+WYhIOhXqbMRMTo8BA7TichbxMP95euDbmc5BL4kSE2/GbUfc+1uqpCGaWvR53swShFlGU6ihcqFU3fpOBTfJM3rgbwvafc1KXtSapKmk= tomek@rhel"
         ]
       }
     ]
@@ -17,14 +17,24 @@
       {
         "path": "/etc/hostname",
         "contents": {
-          "source": "data:,node3.mshome.net"
+          "compression": "",
+          "source": "data:,node3"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/hosts",
+        "contents": {
+          "compression": "",
+          "source": "data:,192.168.122.20%20node1%0A192.168.122.21%20node2%0A192.168.122.22%20node3%0A"
         },
         "mode": 420
       },
       {
         "path": "/etc/NetworkManager/system-connections/eth0.nmconnection",
         "contents": {
-          "source": "data:,%5Bconnection%5D%0Aid%3Deth0%0Atype%3Dethernet%0Ainterface-name%3Deth0%0A%5Bipv4%5D%0Aaddress1%3D172.22.72.40%2F255.255.240.0%2C172.22.64.1%0Adhcp-hostname%3Dnode3.mshome.net%0Adns%3D172.22.64.1%0Adns-search%3Dmshome.net%0Amay-fail%3Dfalse%0Amethod%3Dmanual%0A"
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/1zMwQrCMBAE0Pt+i4lNtKKHfEnpYUm2JNBsSnYV+veiIoiHgYF5zBQbM0UtjWcoKZDmAXTf6NWoMykUVuoLRjKMlT5iKtvjPAOm1EnEBXfz1l2u1nlvvT/6cbTfDIff0UHKcTO5ib7fuCU6QWIJf4rFCGGPOUDF3SxY1rDgKgSVNLcUKvId12cAAAD//1ntOf/AAAAA"
         },
         "mode": 384
       }
