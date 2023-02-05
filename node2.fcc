@@ -8,11 +8,13 @@ passwd:
 storage:
   files:
     - path: /etc/hostname
+      overwrite: true
       mode: 0644
       contents:
         inline: node2
     - path: /etc/hosts
       mode: 0644
+      overwrite: true
       contents:
         inline: | 
           192.168.122.20 node1

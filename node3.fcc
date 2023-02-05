@@ -9,9 +9,11 @@ storage:
   files:
     - path: /etc/hostname
       mode: 0644
+      overwrite: true
       contents:
         inline: node3
     - path: /etc/hosts
+      overwrite: true
       mode: 0644
       contents:
         inline: | 
